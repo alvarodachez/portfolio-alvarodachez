@@ -54,16 +54,6 @@ const Header = () => (
       <SocialIcons href="https://www.linkedin.com/in/%C3%A1lvaro-rueda-s%C3%A1nchez-6812511a0/">
         <AiFillLinkedin size="3rem" />
       </SocialIcons>
-      <li>
-        <Link href="#">
-          <NavLink>ES</NavLink>
-        </Link>
-      </li>
-      <li>
-        <Link href="#">
-          <NavLink>EN</NavLink>
-        </Link>
-      </li>
     </Div3>
   </Container>
 );

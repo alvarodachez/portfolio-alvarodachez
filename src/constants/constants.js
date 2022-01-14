@@ -5,8 +5,8 @@ export const projects = [
       "Using React, Node.js & Styled Components. I have made a personal portfolio Application - from start to finish. It is a website that allows users to see my aptitudes and achievements.",
     image: "/images/portfolio.png",
     tags: ["React", "NextJs", "Styled Components"],
-    source: "https://google.com",
-    visit: "https://google.com",
+    source: "https://github.com/alvarodachez/portfolio-alvarodachez",
+    visit: "https://alvarodachez.es/",
     id: 0,
   },
 ];

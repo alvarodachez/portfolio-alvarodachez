@@ -19,7 +19,9 @@ const Hero = (props) => (
         carrying out new projects & digital realities, meeting new people in
         that process.
       </SectionText>
-      <Button onClick={() => (window.location = "https://google.com")}>
+      <Button
+        onClick={() => (window.location = "https://github.com/alvarodachez")}
+      >
         Learn More
       </Button>
     </LeftSection>

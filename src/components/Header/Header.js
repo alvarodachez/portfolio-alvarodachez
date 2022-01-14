@@ -1,7 +1,7 @@
 import Link from "next/link";
-import React from "react";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { DiCssdeck } from "react-icons/di";
+import { useTranslation } from "react-i18next";
 
 import {
   Container,
@@ -12,6 +12,20 @@ import {
   SocialIcons,
   Span,
 } from "./HeaderStyles";
+import { TranslateService } from "./TestLang";
+let count = 0;
+let t1;
+
+const tv = () => {
+  if (count == 0) {
+    const { t } = useTranslation();
+    count = count + 1;
+    t1 = t;
+    return t;
+  }
+
+  return t1;
+};
 
 const Header = () => (
   <Container>
@@ -33,17 +47,17 @@ const Header = () => (
     <Div2>
       <li>
         <Link href="#projects">
-          <NavLink>Projects</NavLink>
+          <NavLink>{tv()("projects")}</NavLink>
         </Link>
       </li>
       <li>
         <Link href="#tech">
-          <NavLink>Technologies</NavLink>
+          <NavLink>{tv()("tech")}</NavLink>
         </Link>
       </li>
       <li>
         <Link href="#about">
-          <NavLink>About</NavLink>
+          <NavLink>{tv()("about")}</NavLink>
         </Link>
       </li>
     </Div2>
@@ -54,16 +68,7 @@ const Header = () => (
       <SocialIcons href="https://www.linkedin.com/in/%C3%A1lvaro-rueda-s%C3%A1nchez-6812511a0/">
         <AiFillLinkedin size="3rem" />
       </SocialIcons>
-      <li>
-        <Link href="#">
-          <NavLink>ES</NavLink>
-        </Link>
-      </li>
-      <li>
-        <Link href="#">
-          <NavLink>EN</NavLink>
-        </Link>
-      </li>
+      <TranslateService />
     </Div3>
   </Container>
 );

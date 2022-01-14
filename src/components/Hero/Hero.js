@@ -1,5 +1,6 @@
 import React from "react";
 
+import { useTranslation } from "react-i18next";
 import {
   Section,
   SectionText,
@@ -7,22 +8,31 @@ import {
 } from "../../styles/GlobalComponents";
 import Button from "../../styles/GlobalComponents/Button";
 import { LeftSection } from "./HeroStyles";
+let count = 0;
+let t1;
 
+const tv = () => {
+  if (count == 0) {
+    const { t } = useTranslation();
+    count = count + 1;
+    t1 = t;
+    return t;
+  }
+
+  return t1;
+};
 const Hero = (props) => (
   <Section row nopadding>
     <LeftSection>
       <SectionTitle main center>
-        Welcome To <br></br>My Personal Portfolio
+        {tv()("welcome")} <br></br>
+        {tv()("personalPortfolio")}
       </SectionTitle>
-      <SectionText>
-        Hi there, I'm software developer who love learning in all areas,
-        carrying out new projects & digital realities, meeting new people in
-        that process.
-      </SectionText>
+      <SectionText>{tv()("presentation")}</SectionText>
       <Button
         onClick={() => (window.location = "https://github.com/alvarodachez")}
       >
-        Learn More
+        {tv()("learnMore")}
       </Button>
     </LeftSection>
   </Section>

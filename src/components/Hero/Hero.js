@@ -15,7 +15,9 @@ const Hero = (props) => (
         Welcome To <br></br>My Personal Portfolio
       </SectionTitle>
       <SectionText>
-        adssadasdsadjkasdnaskdaskdsakjdajsdklasjkdlaskdaskdjmaskdklsadlksaasdjaskdjaksdjlksajsadksalksajlksadas
+        Hi there, I'm software developer who love learning in all areas,
+        carrying out new projects & digital realities, meeting new people in
+        that process.
       </SectionText>
       <Button onClick={() => (window.location = "https://google.com")}>
         Learn More
